@@ -1,7 +1,7 @@
 # Generating Mock Data and Populating Our Database
 
 `generate.py` is a simple python script that seeds our database with
-somewhat realistic values. 
+somewhat realistic values.
 
 1.  [Running the Script](#running-the-script)
 1.  [Resetting the Database](#resetting-the-database)
@@ -24,10 +24,10 @@ Load the python virtual environment, download dependencies, and run the script.
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 generate.py <environment> <size>
+python3 generate.py <environment> <size> [--new]
 ```
 
-Valid Environments
+### Valid Environments
 
 | Environment | Desc |
 | --- | --- |
@@ -36,7 +36,7 @@ Valid Environments
 | `backup` | Backup runner |
 | `dev` | Development runner |
 
-Valid Sizes
+### Valid Sizes
 
 * `small` or `s`
 * `medium` or `m`

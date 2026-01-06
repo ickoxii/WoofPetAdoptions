@@ -3,10 +3,11 @@ FROM gradle:8.9.0-jdk22 AS build
 WORKDIR /build
 COPY . .
 
-RUN ./gradlew build --no-daemon -p .
+RUN ./gradlew build --no-daemon -p . -x test
 
 # Copy the build artifacts
-FROM openjdk:22
+# FROM openjdk:22
+FROM eclipse-temurin:22-jre
 WORKDIR /app
 COPY --from=build /build/build/libs/pet-adoption-api-1.0.0-SNAPSHOT.jar app.jar
 
